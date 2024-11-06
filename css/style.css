@@ -65,12 +65,14 @@ img {
 
 .card-box {
     background-image: url('https://picsum.photos/200/200');
+    background-size: contain;
     border: 1px solid lightslategray;
+    margin: 0 auto;
     display: block;
     width: 100%;
     aspect-ratio: 1;
-    object-fit: cover;
-	object-position: center;
+   /* object-fit: cover;
+	object-position: center;*/
 }
 
 .card-body{
@@ -95,4 +97,40 @@ img {
     max-height: 60%;
 }
 
+/* layout responsive mobile first */
 
+/* extra small */
+
+@media (max-width: 600px) {
+    .col
+    {
+        width: 100% 
+    }
+}
+
+/* sm */
+
+@media (min-width: 601px) {
+    .col
+    {
+        width: 100% 
+    }
+}
+
+/* md */
+
+@media (min-width: 768px) {
+    .col
+    {
+        width: calc(100% / 2);
+    }
+}
+
+/* lg */
+
+@media (min-width: 992px) {
+    .col
+    {
+        width: calc(100% / 3);
+    }
+}
