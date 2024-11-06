@@ -33,20 +33,23 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px 0;
-    height: 500px ;
-}
-
-/*debug rules*/
-
-.container {
-    border: 1px solid violet;
-}
-
-.row{
-    border: 2px solid red;
 }
 
 .col{
+    width: calc(100% / 3);
+    padding: 10px;
+}
+/*debug rules*/
+
+.debug .container {
+    border: 1px solid violet;
+}
+
+.debug .row{
+    border: 2px solid red;
+}
+
+.debug .col{
     border: 2px solid blue;
 }
 
@@ -54,15 +57,24 @@ img {
 
 .card{
     background-color: white;
-    border: 2px solid rgb(26, 203, 10); 
-    max-width: 360px;   
+    border: 2px solid rgb(8, 8, 8); 
+    max-width: 250px;
+    padding: 20px;  
 }
+ 
 
 .card-box {
-    background-color: aquamarine;
+    background-image: url('https://picsum.photos/200/200');
     border: 1px solid lightslategray;
-    width: 260px;
-    height: 260px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+	object-position: center;
+}
+
+.card-body{
+    margin-top: 10px;
 }
 
 /*Header*/ 
@@ -80,5 +92,7 @@ img {
 
 .bg-table-cork{
     background-image: url(../img/cork.png);
-    height: 720px;
+    max-height: 60%;
 }
+
+
