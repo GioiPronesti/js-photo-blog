@@ -1,0 +1,84 @@
+*{
+   box-sizing: border-box; 
+   margin:0;
+   padding:0;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*LAYOUT*/
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 0;
+    height: 500px ;
+}
+
+/*debug rules*/
+
+.container {
+    border: 1px solid violet;
+}
+
+.row{
+    border: 2px solid red;
+}
+
+.col{
+    border: 2px solid blue;
+}
+
+/*components*/
+
+.card{
+    background-color: white;
+    border: 2px solid rgb(26, 203, 10); 
+    max-width: 360px;   
+}
+
+.card-box {
+    background-color: aquamarine;
+    border: 1px solid lightslategray;
+    width: 260px;
+    height: 260px;
+}
+
+/*Header*/ 
+
+.white-header {
+	background-image: url(../img/wall.png);
+	color: rgb(0, 0, 0);
+	padding: 20px 0;
+    text-align: center;
+}
+
+.heading{
+    text-transform: uppercase;
+}
+
+.bg-table-cork{
+    background-image: url(../img/cork.png);
+    height: 720px;
+}
