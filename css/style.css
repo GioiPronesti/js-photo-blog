@@ -62,17 +62,17 @@ img {
     padding: 20px;  
 }
  
-
-.card-box {
-    background-image: url('https://picsum.photos/200/200');
-    background-size: contain;
-    border: 1px solid lightslategray;
-    margin: 0 auto;
-    display: block;
+.img-card{
+    display: block; 
     width: 100%;
-    aspect-ratio: 1;
-   /* object-fit: cover;
-	object-position: center;*/
+    height: 100%;
+    object-fit: cover;
+	object-position: center;
+}
+
+.card-box {      
+    border: 1px solid lightslategray;
+    max-width: 100%;    
 }
 
 .card-body{
