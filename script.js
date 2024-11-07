@@ -28,10 +28,11 @@ const btnElement = document.querySelector(".btn-close");
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.querySelector(".row");
 
-  function fecthPhothos() {
+  function fetchPhothos() {
     axios
       .get("https://jsonplaceholder.typicode.com/photos?_limit=6")
       .then((response) => {
+        // Hai i dati delle foto
         const photos = response.data;
         let photosHTML = "";
         photos.forEach((photo) => {
@@ -59,12 +60,28 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>`;
         });
         blogContainer.innerHTML = photosHTML;
+        // Da qui gli elementi della stringa diventano elementi del DOM e quindi posso cercarli
+        console.log(document.querySelectorAll(".card"));
+        const cards = document.querySelectorAll(".card");
+
+        for (let i = 0; i < cards.length; i++) {
+          const cardImageEl = cards[i].querySelector("img.pin-img");
+
+          const cardImageSrc = cardImageEl.src;
+          cards[i].addEventListener("click", () => {
+            console.log(cardImageSrc);
+
+            const overlayImageEl = document.querySelector("img.img-focus");
+            console.log(overlayImageEl);
+            overlayImageEl.src = cardImageSrc;
+          });
+        }
       })
       .catch((error) => {
         console.log(error);
       });
   }
-  fecthPhothos();
+  fetchPhothos();
 });
 
 console.log(overlayElement);

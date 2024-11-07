@@ -90,6 +90,8 @@ img {
 /*components*/
 
 .card{
+    cursor: pointer;
+    display: block;
     position: relative;
     background-color: white;
     border: 2px solid rgb(8, 8, 8); 
