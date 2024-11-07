@@ -9,6 +9,10 @@ html {
     overflow: hidden;
 }
 
+body {
+    position: relative;
+}
+
 a {
 	color: currentColor;
 	text-decoration: none;
@@ -21,6 +25,31 @@ ol {
 
 img {
 	max-width: 100%;
+}
+
+/*LAYOUT overlay*/
+
+.container-overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+    visibility: visible;
+    z-index:10;
+}
+
+.btn-close{
+    position: absolute;
+    top: 20px;
+    left: +50px;
+    background-color: rgb(223, 17, 17);
+    color:white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+
+    
 }
 
 /*LAYOUT*/
