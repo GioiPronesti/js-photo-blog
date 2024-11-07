@@ -22,6 +22,8 @@
         </div>
 </div>
 */
+const overlayElement = document.querySelector(".container-overlay");
+const btnElement = document.querySelector(".btn-close");
 
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.querySelector(".row");
@@ -63,4 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
   fecthPhothos();
+});
+
+console.log(overlayElement);
+console.log(btnElement);
+
+btnElement.addEventListener("click", () => {
+  overlayElement.style.display = "none";
+  console.log("close btn is clicked");
 });
