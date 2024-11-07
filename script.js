@@ -45,15 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="card-box">
                             <img
                                 class="img-card"
-                                src="https://picsum.photos/200/200"
+                                src="${photo.thumbnailUrl}"
                                 alt="image card"
                             />
                             </div>
                         <!-- card body -->
                         <div class="card-body">
-                            <p class="card-text">
-                            Some quick example text to build on the card title
-                            </p>
+                            <p>${photo.title}</p>
                         </div>
                     </div>
             </div>`;
