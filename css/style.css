@@ -42,9 +42,9 @@ img {
     height: 100vh;
     background:rgba(0,0,0,0.6);
     z-index:10;
-    user-select: none;/* l'utente non può selezionare l img quando seleziono l'overlay*/
+    user-select: none; /* l'utente non può selezionare l'immagine inquadrata quando ho l'overlay aperto */
 }
-
+ 
 .overlay-display-none{
     display: none;
 }
@@ -64,6 +64,10 @@ img {
     font-size: 16px;
     z-index: 20;
     
+}
+
+.btn-close:hover{
+    transform: scale(1.2);
 }
 
 /*LAYOUT*/
@@ -110,7 +114,7 @@ img {
     display: block;
     position: relative;
     background-color: white;
-    border: 2px solid rgb(8, 8, 8); 
+    border: 1px solid rgb(64, 63, 63); 
     max-width: 250px;
     height: 100%;
     padding: 10px 10px;
@@ -123,6 +127,7 @@ img {
     box-shadow: 0 12px 20px rgba(0,0,0,0.5);
     transform: scale(1.2) rotate(10deg);
     transition: 0.5s;
+    z-index: 2;
     .pin-img{
         display: none;
     }
@@ -139,15 +144,11 @@ img {
     display: block; 
     object-fit: cover;
 	object-position: center;
+    margin-bottom: 10px;
 }
 
 .card-box {      
     border: 1px solid lightslategray;
-  
-}
-
-.card-body{
-    margin-top: 10px;
 }
 
 /*Header*/ 
@@ -161,12 +162,27 @@ img {
 
 .heading{
     text-transform: uppercase;
+    font-size: 70px;
 
 }
 
 .bg-table-cork{
     background-image: url(../img/cork.png);
     max-height: 100%;
+}
+
+/*debug rules*/
+
+.debug .container {
+    border: 1px solid violet;
+}
+
+.debug .row{
+    border: 2px solid red;
+}
+
+.debug .col{
+    border: 2px solid blue;
 }
 
 /* layout responsive mobile first */
