@@ -6,29 +6,30 @@
     <title>My blog post</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body id="body" class="bg-table-cork">
     <header class="white-header">
       <h1 class="heading">estate '24</h1>
     </header>
 
-    <main class="bg-table-cork">
+    <main>
       <!-- section of blog -->
       <section class="blog">
         <!-- container -->
-        <div class="container-overlay">
-          <button type="button" class="btn-close">Close</button>
-          <img
-            class="img-focus"
-            src="https://picsum.photos/200"
-            alt="image card"
-            width="300px"
-          />
-        </div>
+
         <div class="container">
           <div class="row"></div>
         </div>
       </section>
     </main>
+    <div class="container-overlay overlay-display-none">
+      <button type="button" class="btn-close">Close</button>
+      <img
+        class="img-focus"
+        src="https://picsum.photos/200"
+        alt="image card"
+        width="400px"
+      />
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./script.js"></script>
