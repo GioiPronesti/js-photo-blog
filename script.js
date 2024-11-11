@@ -24,6 +24,7 @@
 */
 const overlayElement = document.querySelector(".container-overlay");
 const btnElement = document.querySelector(".btn-close");
+const bodyElement = document.getElementById("body");
 
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.querySelector(".row");
@@ -39,41 +40,39 @@ document.addEventListener("DOMContentLoaded", () => {
           photosHTML += `
             
             <div class="col">
-                <!-- card 1 -->
-                    <div class="card">
-                        <!-- card pin -->
-                        <img class="pin-img" src="./img/pin.svg" alt="pin" />
+              
+                <div class="card">
+                  <!-- card pin -->
+                    <img class="pin-img" src="./img/pin.svg" alt="pin" />
 
-                        <!-- card photo -->
-                            <div class="card-box">
-                            <img
-                                class="img-card"
-                                src="${photo.thumbnailUrl}"
-                                alt="image card"
-                            />
-                            </div>
-                        <!-- card body -->
-                        <div class="card-body">
-                            <p>${photo.title}</p>
-                        </div>
-                    </div>
+                    <img
+                      class="img-card"
+                      src="${photo.thumbnailUrl}"
+                      alt="image card"
+                    />   
+
+                    <p>${photo.title}</p>
+                </div>
             </div>`;
         });
         blogContainer.innerHTML = photosHTML;
         // Da qui gli elementi della stringa diventano elementi del DOM e quindi posso cercarli
-        console.log(document.querySelectorAll(".card"));
+        //console.log(document.querySelectorAll(".card"));
         const cards = document.querySelectorAll(".card");
 
         for (let i = 0; i < cards.length; i++) {
-          const cardImageEl = cards[i].querySelector("img.pin-img");
+          const cardImageEl = cards[i].querySelector("img.img-card");
 
           const cardImageSrc = cardImageEl.src;
           cards[i].addEventListener("click", () => {
-            console.log(cardImageSrc);
+            //console.log(cardImageSrc);
 
             const overlayImageEl = document.querySelector("img.img-focus");
-            console.log(overlayImageEl);
+            //console.log(overlayImageEl);
             overlayImageEl.src = cardImageSrc;
+
+            bodyElement.classList.add("overflow-hidden");
+            overlayElement.classList.remove("overlay-display-none");
           });
         }
       })
@@ -84,10 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchPhothos();
 });
 
-console.log(overlayElement);
-console.log(btnElement);
+//console.log(overlayElement);
+//console.log(btnElement);
 
 btnElement.addEventListener("click", () => {
-  overlayElement.style.display = "none";
-  console.log("close btn is clicked");
+  overlayElement.classList.add("overlay-display-none");
+  //console.log("close btn is clicked");
+  bodyElement.classList.remove("overflow-hidden");
 });
